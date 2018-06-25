@@ -6,6 +6,8 @@
 package com.ky.jacon.api.services;
 
 import com.ky.jacon.api.Model.Email;
+import com.ky.jacon.api.Model.Food;
+import com.ky.jacon.api.Model.Transaction;
 import com.ky.jacon.api.Model.User;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -16,7 +18,7 @@ import java.util.List;
  * @author kys
  */
 public interface GlobalService extends Remote {
-  boolean login(User user) throws RemoteException;
+  User login(User user) throws RemoteException;
 
   User addUser(User user) throws RemoteException;
   void updateUser(User user) throws RemoteException;
@@ -25,4 +27,9 @@ public interface GlobalService extends Remote {
   List<User> getUsers() throws RemoteException;
   
   boolean sendEmail(Email email) throws RemoteException;
+  
+  List<Food> getFoods() throws RemoteException;
+  
+  Transaction addTransaction(Transaction transaction) throws RemoteException;
+  List<Transaction> getTransactionsByUserId(int id) throws RemoteException;
 }
