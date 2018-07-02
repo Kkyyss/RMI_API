@@ -12,14 +12,15 @@ import java.io.Serializable;
  * @author kys
  */
 public class User implements Serializable {
-  private int user_id;
+  private String user_id;
   
   private Role role;
   private String username, password, email;
 
-  public int getUser_id() {
+  public String getUser_id() {
     return user_id;
   }
+
 
   public Role getRole() {
     return role;
@@ -37,9 +38,11 @@ public class User implements Serializable {
     return password;
   }
 
-  public void setUser_id(int user_id) {
+  public void setUser_id(String user_id) {
     this.user_id = user_id;
   }
+
+  
 
   public void setRole(Role role) {
     this.role = role;

@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author kys
  */
 public class Email implements Serializable {
-  private String from, to, content;
+  private String from, to, subject, content;
 
   public String getFrom() {
     return from;
@@ -21,6 +21,11 @@ public class Email implements Serializable {
   public String getTo() {
     return to;
   }
+
+  public String getSubject() {
+    return subject;
+  }
+  
 
   public String getContent() {
     return content;
@@ -37,4 +42,9 @@ public class Email implements Serializable {
   public void setContent(String content) {
     this.content = content;
   }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+  
 }
