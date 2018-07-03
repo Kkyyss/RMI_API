@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Book implements Serializable {
   private String book_id;
-  private String book_name, book_author, book_desc, book_subject, book_publisher, book_isbn;
+  private String book_name, book_author, book_subject, book_publisher, book_isbn;
   private int book_quantity;
 
   public String getBook_id() {
@@ -30,10 +30,6 @@ public class Book implements Serializable {
 
   public String getBook_name() {
     return book_name;
-  }
-
-  public String getBook_desc() {
-    return book_desc;
   }
 
   public String getBook_subject() {
@@ -58,10 +54,6 @@ public class Book implements Serializable {
 
   public void setBook_name(String book_name) {
     this.book_name = book_name;
-  }
-
-  public void setBook_desc(String book_desc) {
-    this.book_desc = book_desc;
   }
 
   public void setBook_subject(String book_subject) {

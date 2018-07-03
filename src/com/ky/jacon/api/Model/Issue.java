@@ -6,14 +6,14 @@
 package com.ky.jacon.api.Model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  *
  * @author kys
  */
 public class Issue implements Serializable {
-  private String tr_id, user_id;
+  private String tr_id;
+  private Student tr_student;
   private String tr_date;
   private String tr_returned_date;
   private Book tr_book;
@@ -21,10 +21,6 @@ public class Issue implements Serializable {
 
   public String getTr_id() {
     return tr_id;
-  }
-
-  public String getUser_id() {
-    return user_id;
   }
 
   public String getTr_date() {
@@ -53,8 +49,12 @@ public class Issue implements Serializable {
     this.tr_id = tr_id;
   }
 
-  public void setUser_id(String user_id) {
-    this.user_id = user_id;
+  public Student getTr_student() {
+    return tr_student;
+  }
+
+  public void setTr_student(Student tr_student) {
+    this.tr_student = tr_student;
   }
 
   public void setTr_date(String tr_date) {
