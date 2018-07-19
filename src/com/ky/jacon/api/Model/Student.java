@@ -12,7 +12,15 @@ import java.io.Serializable;
  * @author kys
  */
 public class Student extends User implements Serializable {
-  String student_id, student_no, student_name, student_intake;
+  String student_id, student_no, student_name, student_intake, student_ic;
+
+  public String getStudent_ic() {
+    return student_ic;
+  }
+
+  public void setStudent_ic(String student_ic) {
+    this.student_ic = student_ic;
+  }
 
   public String getStudent_id() {
     return student_id;

@@ -23,13 +23,19 @@ public interface GlobalService extends Remote {
 
   // User
   User addUser(User user) throws RemoteException;
-  void updateUser(User user) throws RemoteException;
-  void deleteUser(int id) throws RemoteException;
-  void getUser(String id) throws RemoteException;
+  String deleteUser(String id) throws RemoteException;
+  User getUserByEmail(String email) throws RemoteException;
+  User getUserByUsername(String username) throws RemoteException;
+  String saveUserPwd(User u) throws RemoteException;
+  String saveUserInfo(User u) throws RemoteException;
   List<User> getUsers() throws RemoteException;
   
   // Student
+  Student addStudent(Student student) throws RemoteException;
+  Student addStudentProfile(Student student) throws RemoteException;
   Student getStudent(String id) throws RemoteException;
+  Student getStudentProfile(String uid) throws RemoteException;
+  List<Student> getStudents() throws RemoteException;
   
   boolean sendEmail(Email email) throws RemoteException;
   
