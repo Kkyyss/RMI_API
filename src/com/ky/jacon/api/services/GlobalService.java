@@ -23,12 +23,14 @@ public interface GlobalService extends Remote {
 
   // User
   User addUser(User user) throws RemoteException;
-  String deleteUser(String id) throws RemoteException;
+  String deleteUser(User user) throws RemoteException;
   User getUserByEmail(String email) throws RemoteException;
   User getUserByUsername(String username) throws RemoteException;
   String saveUserPwd(User u) throws RemoteException;
   String saveUserInfo(User u) throws RemoteException;
   List<User> getUsers() throws RemoteException;
+  List<User> getUsersByRole(String role) throws RemoteException;
+  String switchStatus(User u) throws RemoteException;
   
   // Student
   Student addStudent(Student student) throws RemoteException;
@@ -50,4 +52,7 @@ public interface GlobalService extends Remote {
   String addIssue(Issue issue) throws RemoteException;
   List<Issue> getIssuesByUserId(String id) throws RemoteException;
   List<Issue> getIssues() throws RemoteException;
+  
+  // Misc.
+  List<String> getRoles() throws RemoteException;
 }

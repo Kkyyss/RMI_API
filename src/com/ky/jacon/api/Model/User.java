@@ -16,9 +16,18 @@ public class User implements Serializable {
   
   private Role role;
   private String username, password, email;
+  private int active;
 
   public String getUser_id() {
     return user_id;
+  }
+
+  public int getActive() {
+    return active;
+  }
+
+  public void setActive(int active) {
+    this.active = active;
   }
 
 
