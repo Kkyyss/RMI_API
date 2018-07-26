@@ -46,6 +46,7 @@ public interface GlobalService extends Remote {
   Book addBook(Book book) throws RemoteException;
   Book getBook(String id) throws RemoteException;
   String deleteBook(String id) throws RemoteException;
+  String saveBook(Book book) throws RemoteException;
   List<Book> getBooks() throws RemoteException;
   String returnBook(Issue issue) throws RemoteException;
   String updateBookQuantity(int num, String ISBN) throws RemoteException;
