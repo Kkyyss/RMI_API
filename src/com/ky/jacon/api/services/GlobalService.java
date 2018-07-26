@@ -36,6 +36,7 @@ public interface GlobalService extends Remote {
   Student addStudent(Student student) throws RemoteException;
   Student addStudentProfile(Student student) throws RemoteException;
   Student getStudent(String id) throws RemoteException;
+  String deleteStudent(String uid) throws RemoteException;
   Student getStudentProfile(String uid) throws RemoteException;
   List<Student> getStudents() throws RemoteException;
   
@@ -44,12 +45,15 @@ public interface GlobalService extends Remote {
   // Book
   Book addBook(Book book) throws RemoteException;
   Book getBook(String id) throws RemoteException;
+  String deleteBook(String id) throws RemoteException;
   List<Book> getBooks() throws RemoteException;
   String returnBook(Issue issue) throws RemoteException;
   String updateBookQuantity(int num, String ISBN) throws RemoteException;
   
   // Issue
   String addIssue(Issue issue) throws RemoteException;
+  String deleteIssueByUserId(String uid) throws RemoteException;
+  String deleteIssueByBookId(String bid) throws RemoteException;
   List<Issue> getIssuesByUserId(String id) throws RemoteException;
   List<Issue> getIssues() throws RemoteException;
   
